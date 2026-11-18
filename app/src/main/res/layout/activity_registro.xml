@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp">
+
+        <!-- TITULO -->
+        <TextView
+            android:id="@+id/txtTituloRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/registro_titulo"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- SUBTITULO -->
+        <TextView
+            android:id="@+id/txtSubtituloRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/registro_subtitulo"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="14sp" />
+
+        <!-- SECCION DATOS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="@string/registro_seccion_datos"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- NOMBRE -->
+        <EditText
+            android:id="@+id/edtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="52dp"
+            android:layout_marginTop="6dp"
+            android:hint="@string/registro_nombre_hint"
+            android:inputType="textPersonName"
+            android:autofillHints="name"
+            android:textColor="?attr/colorOnSurface"
+            android:textColorHint="?attr/colorOnSurfaceVariant"
+            android:textSize="15sp" />
+
+        <!-- CORREO -->
+        <EditText
+            android:id="@+id/edtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="52dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/registro_correo_hint"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            android:textColor="?attr/colorOnSurface"
+            android:textColorHint="?attr/colorOnSurfaceVariant"
+            android:textSize="15sp" />
+
+        <!-- CONTRASEÑA -->
+        <EditText
+            android:id="@+id/edtContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="52dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/registro_contrasena_hint"
+            android:inputType="textPassword"
+            android:autofillHints="newPassword"
+            android:textColor="?attr/colorOnSurface"
+            android:textColorHint="?attr/colorOnSurfaceVariant"
+            android:textSize="15sp" />
+
+        <!-- CONFIRMAR CONTRASEÑA -->
+        <EditText
+            android:id="@+id/edtConfirmarContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="52dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/registro_confirmar_contrasena_hint"
+            android:inputType="textPassword"
+            android:autofillHints="newPassword"
+            android:textColor="?attr/colorOnSurface"
+            android:textColorHint="?attr/colorOnSurfaceVariant"
+            android:textSize="15sp" />
+
+        <!-- PREGUNTA RADIOGROUP -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/registro_pregunta"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- OPCIONES DE ORGANIZACION -->
+        <RadioGroup
+            android:id="@+id/rgOrganizacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbIndividual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:gravity="center_vertical"
+                android:buttonTint="@color/green"
+                android:text="@string/registro_individual"
+                android:textColor="?attr/colorOnSurface" />
+
+            <RadioButton
+                android:id="@+id/rbPareja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:gravity="center_vertical"
+                android:buttonTint="@color/green"
+                android:text="@string/registro_pareja"
+                android:textColor="?attr/colorOnSurface" />
+
+            <RadioButton
+                android:id="@+id/rbFamilia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:gravity="center_vertical"
+                android:buttonTint="@color/green"
+                android:text="@string/registro_familia"
+                android:textColor="?attr/colorOnSurface" />
+
+        </RadioGroup>
+
+        <!-- TERMINOS -->
+        <CheckBox
+            android:id="@+id/chkTerminos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/green"
+            android:text="@string/registro_terminos"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="13sp" />
+
+        <!-- BOTON REGISTRAR -->
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/registro_boton"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+
+        <!-- VOLVER AL LOGIN -->
+        <TextView
+            android:id="@+id/txtIrLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/registro_login"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>

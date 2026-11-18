@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp">
+
+        <!-- TITULO -->
+        <TextView
+            android:id="@+id/txtTituloAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/agregar_titulo"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- SUBTITULO -->
+        <TextView
+            android:id="@+id/txtSubtituloAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/agregar_subtitulo"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="14sp"
+            android:gravity="center" />
+
+        <!-- ZONA -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/agregar_zona"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spnZona"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:entries="@array/zonas_hogar"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/edtNuevaZona"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="@string/agregar_nueva_zona_hint"
+            android:inputType="textCapWords"
+            android:autofillHints="postalAddress"
+            android:textColor="?attr/colorOnSurface"
+            android:textColorHint="?attr/colorOnSurfaceVariant"
+            android:textSize="14sp" />
+
+        <!-- CATEGORIA -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/agregar_categoria"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spnCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:entries="@array/categorias_tarea"
+            android:spinnerMode="dropdown" />
+
+        <!-- TAREA -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/agregar_tarea"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spnTarea"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:entries="@array/tareas_sugeridas"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/edtTareaPersonalizada"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="@string/agregar_tarea_personalizada_hint"
+            android:inputType="textCapSentences"
+            android:textColor="?attr/colorOnSurface"
+            android:textColorHint="?attr/colorOnSurfaceVariant"
+            android:textSize="14sp" />
+
+        <!-- FRECUENCIA -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/agregar_frecuencia"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/edtFrecuenciaCantidad"
+                android:layout_width="80dp"
+                android:layout_height="52dp"
+                android:hint="3"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="?attr/colorOnSurface"
+                android:textColorHint="?attr/colorOnSurfaceVariant" />
+
+            <Spinner
+                android:id="@+id/spnUnidadFrecuencia"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:entries="@array/unidades_frecuencia"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <!-- RESPONSABLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/agregar_responsable"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spnResponsable"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:entries="@array/responsables"
+            android:spinnerMode="dropdown" />
+
+        <!-- RECORDATORIO -->
+        <Switch
+            android:id="@+id/swRecordatorio"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/agregar_recordatorio"
+            android:textColor="?attr/colorOnSurface"
+            android:thumbTint="@color/green"
+            android:trackTint="?attr/colorOnSurfaceVariant" />
+
+        <!-- PRIORIDAD -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/agregar_prioridad"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/rgPrioridad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbPrioridadBaja"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/prioridad_baja"
+                android:textColor="?attr/colorOnSurface"
+                android:buttonTint="@color/green" />
+
+            <RadioButton
+                android:id="@+id/rbPrioridadMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/prioridad_media"
+                android:textColor="?attr/colorOnSurface"
+                android:buttonTint="@color/green" />
+
+            <RadioButton
+                android:id="@+id/rbPrioridadAlta"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/prioridad_alta"
+                android:textColor="?attr/colorOnSurface"
+                android:buttonTint="@color/green" />
+
+        </RadioGroup>
+
+        <!-- GUARDAR -->
+        <Button
+            android:id="@+id/btnGuardarTarea"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/agregar_boton"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+
+        <!-- CANCELAR -->
+        <TextView
+            android:id="@+id/txtCancelarAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/agregar_cancelar"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>

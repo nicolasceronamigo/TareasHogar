@@ -1,10 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TareasHogar</string>
-    <string name="descripcion_logo">ImagenLogo</string>
     <string name="nombre_app">Tareas Hogar</string>
+    <string name="descripcion_logo">ImagenLogo</string>
+
     <string name="hint_correo">Correo</string>
     <string name="hint_contraseña">Contraseña</string>
     <string name="btn_login">Iniciar Sesión</string>
     <string name="chk_recordar_inicio">Recuérdame</string>
     <string name="pregunta_registro">¿No te has registrado? Regístrate aquí</string>
+
+    <!-- REGISTRO -->
+    <string name="registro_titulo">Crear cuenta</string>
+    <string name="registro_subtitulo">Organiza las tareas de tu hogar</string>
+    <string name="registro_seccion_datos">Datos de la cuenta</string>
+    <string name="registro_nombre_hint">Nombre completo</string>
+    <string name="registro_correo_hint">Correo electrónico</string>
+    <string name="registro_contrasena_hint">Contraseña</string>
+    <string name="registro_confirmar_contrasena_hint">Repetir contraseña</string>
+    <string name="registro_pregunta">¿Cómo organizas las tareas en casa?</string>
+    <string name="registro_individual">Individualmente</string>
+    <string name="registro_pareja">En pareja</string>
+    <string name="registro_familia">En familia</string>
+    <string name="registro_terminos">Acepto los términos y condiciones</string>
+    <string name="registro_boton">Registrarme</string>
+    <string name="registro_login">¿Ya tienes cuenta? Inicia sesión</string>
+
+    <!-- AGREGAR TAREA -->
+    <string name="agregar_titulo">Agregar tarea</string>
+    <string name="agregar_subtitulo">Organiza las actividades de tu hogar</string>
+    <string name="agregar_zona">Zona o espacio</string>
+    <string name="agregar_nueva_zona_hint">O escribe una nueva zona</string>
+    <string name="agregar_categoria">Categoría</string>
+    <string name="agregar_tarea">Tarea específica</string>
+    <string name="agregar_tarea_personalizada_hint">O escribe una tarea personalizada</string>
+    <string name="agregar_frecuencia">Frecuencia de repetición</string>
+    <string name="agregar_responsable">Responsable</string>
+    <string name="agregar_recordatorio">Activar recordatorio</string>
+    <string name="agregar_prioridad">Prioridad de la tarea</string>
+    <string name="prioridad_baja">Baja</string>
+    <string name="prioridad_media">Media</string>
+    <string name="prioridad_alta">Alta</string>
+    <string name="agregar_boton">Guardar tarea</string>
+    <string name="agregar_cancelar">Cancelar</string>
+
+    <!-- ZONAS DEL HOGAR -->
+    <string-array name="zonas_hogar">
+        <item>Selecciona una zona</item>
+        <item>Cocina</item>
+        <item>Baño</item>
+        <item>Dormitorio</item>
+        <item>Sala de estar</item>
+        <item>Patio</item>
+        <item>Otro espacio</item>
+    </string-array>
+
+    <!-- CATEGORIAS -->
+    <string-array name="categorias_tarea">
+        <item>Selecciona una categoría</item>
+        <item>Limpieza</item>
+        <item>Cocina</item>
+        <item>Organización</item>
+        <item>Lavandería</item>
+        <item>Mantenimiento</item>
+    </string-array>
+
+    <!-- TAREAS SUGERIDAS -->
+    <string-array name="tareas_sugeridas">
+        <item>Selecciona una tarea</item>
+        <item>Barrer</item>
+        <item>Trapear</item>
+        <item>Limpiar polvo</item>
+        <item>Fregar</item>
+        <item>Lavar platos</item>
+        <item>Limpiar baño</item>
+        <item>Lavar ropa</item>
+        <item>Ordenar habitación</item>
+    </string-array>
+
+    <!-- FRECUENCIA -->
+    <string-array name="unidades_frecuencia">
+        <item>Días</item>
+        <item>Semanas</item>
+        <item>Meses</item>
+    </string-array>
+
+    <!-- RESPONSABLES -->
+    <string-array name="responsables">
+        <item>Yo</item>
+        <item>Otro integrante</item>
+        <item>Sin asignar</item>
+    </string-array>
+
+    <!-- INTELIGENCIA ARTIFICIAL -->
+    <string name="ia_titulo">Asistente IA</string>
+    <string name="ia_subtitulo">Consulta cómo organizar las tareas de tu hogar</string>
+    <string name="ia_pregunta_label">Escribe tu pregunta</string>
+    <string name="ia_pregunta_hint">Ej.: ¿Cómo puedo organizar la limpieza de la cocina?</string>
+    <string name="ia_boton">Preguntar a la IA</string>
+    <string name="ia_respuesta_titulo">Ejemplo de respuesta</string>
+
+    <string name="ia_respuesta_ejemplo">Puedes organizar la limpieza de tu cocina dividiendo las actividades en tres tareas:\n\n• Lavar los platos.\n• Limpiar las superficies.\n• Barrer y trapear el suelo.\n\nAsigna un responsable y una frecuencia para cada actividad.</string>
+
 </resources>
