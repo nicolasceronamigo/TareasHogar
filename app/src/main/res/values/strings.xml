@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TareasHogar</string>
+    <string name="descripcion_logo">ImagenLogo</string>
+    <string name="nombre_app">Tareas Hogar</string>
+    <string name="hint_correo">Correo</string>
+    <string name="hint_contraseña">Contraseña</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="chk_recordar_inicio">Recuérdame</string>
+    <string name="pregunta_registro">¿No te has registrado? Regístrate aquí</string>
 </resources>
