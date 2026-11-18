@@ -17,7 +17,7 @@
             android:id="@+id/imgLogo"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/rata_barriendo"
+            android:src="@mipmap/raton_barriendo"
             android:contentDescription="@string/descripcion_logo"
             />
 
