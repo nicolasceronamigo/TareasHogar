@@ -10,6 +10,7 @@
 
     <string name="titulo_lista">Tareas Disponibles</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="agregar_tarea">Agregar Tarea</string>
 
     <string name="descripcion_barrer">Barrer Patio</string>
     <string name="txt_barrer_patio">Barrer Patio</string>
@@ -23,8 +24,12 @@
     <string name="txt_estado_tarea_realizada">Realizada</string>
     <string name="txt_estado_tarea_pendiente">Pendiente</string>
 
-    <string name="btn_quitar">Quitar</string>
-    <string name="btn_realizada">Realizada</string>
-
-
+    <string name="btn_detalle">Detalle</string>
+    <string name="txt_veces_realizada"> Cantidad realizada: </string>
+    <string name="txt_num_realizada"> 5 </string>
+    <string name="txt_ultima_realizada">Realizada por última vez: </string>
+    <string name="txt_fecha_ultima_realizada">19-11-2026</string>
+    <string name="sw_realizada">Marcar como Realizada</string>
+    <string name="btn_editar">Editar Tarea</string>
+    <string name="btn_eliminar">Eliminar Tarea</string>
 </resources>

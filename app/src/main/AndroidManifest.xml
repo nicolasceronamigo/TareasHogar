@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TareasHogar">
         <activity
+            android:name=".DetalleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListaActivity"
             android:exported="false" />
         <activity
