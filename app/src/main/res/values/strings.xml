@@ -102,4 +102,24 @@
 
     <string name="ia_respuesta_ejemplo">Puedes organizar la limpieza de tu cocina dividiendo las actividades en tres tareas:\n\n• Lavar los platos.\n• Limpiar las superficies.\n• Barrer y trapear el suelo.\n\nAsigna un responsable y una frecuencia para cada actividad.</string>
 
+
+    <string name="titulo_lista">Tareas Disponibles</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+
+    <string name="descripcion_barrer">Barrer Patio</string>
+    <string name="txt_barrer_patio">Barrer Patio</string>
+
+    <string name="descripcion_aspirar_casa">Aspirar Casa</string>
+    <string name="txt_aspirar_casa">Aspirar Casa</string>
+
+    <string name="descripcion_lavar_loza">Lavar Loza</string>
+    <string name="txt_lavar_loza">Lavar Loza</string>
+
+    <string name="txt_estado_tarea_realizada">Realizada</string>
+    <string name="txt_estado_tarea_pendiente">Pendiente</string>
+
+    <string name="btn_quitar">Quitar</string>
+    <string name="btn_realizada">Realizada</string>
+
+
 </resources>
