@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores de modo oscuro: mismos nombres, tonos más claros sobre fondo oscuro. -->
+    <color name="primario">#81C784</color>
+    <color name="sobre_primario">#00390F</color>
+    <color name="fondo_tarjeta">#1F2E21</color>
+
+    <color name="accion_info">#90CAF9</color>
+    <color name="sobre_accion_info">#00315C</color>
+    <color name="accion_advertencia">#FFD54F</color>
+    <color name="sobre_accion_advertencia">#000000</color>
+    <color name="accion_peligro">#EF9A9A</color>
+    <color name="sobre_accion_peligro">#410002</color>
+</resources>
