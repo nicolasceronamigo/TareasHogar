@@ -1,192 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ListaActivity">
+
+    <!-- BARRA SUPERIOR: título y botones -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="16dp"
-        >
+        android:orientation="horizontal"
+        android:padding="16dp">
+
         <TextView
             android:id="@+id/txtListaTareas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textStyle="bold"
-            android:textSize="25sp"
             android:text="@string/titulo_lista"
-            />
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/btnAgregar"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/agregar_tarea"
-            android:src="@android:drawable/ic_input_add"
-            tools:ignore="ImageContrastCheck" />
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/descripcion_icono_agregar"
+            android:src="@drawable/ic_agregar"
+            app:tint="?attr/colorOnSurface" />
 
         <ImageButton
             android:id="@+id/btnCerrarSesion"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@android:color/transparent"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/cerrar_sesion"
-            android:scaleType="centerCrop"
-            android:src="@drawable/x" />
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/x"
+            app:tint="?attr/colorOnSurface" />
     </LinearLayout>
+
+    <!-- LISTA DE TAREAS (con scroll) -->
     <ScrollView
+        android:id="@+id/scrollTareas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="10dp"
-            android:gravity="center_vertical"
-            >
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
 
+            <!-- FILA 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_tarjeta"
                 android:gravity="center_vertical"
-                >
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <ImageView
+                    android:id="@+id/imgBarrer"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
-                    android:src="@drawable/escoba"
                     android:contentDescription="@string/descripcion_barrer"
-                    />
+                    android:src="@drawable/escoba" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="@string/txt_barrer_patio"
-                        android:gravity="center_horizontal"
-                        />
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/txtNombreBarrer"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:text="@string/txt_barrer_patio"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoBarrer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="@string/txt_estado_tarea_realizada"
-                        android:gravity="center_horizontal"
-                        />
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btnDetalleBarrer"
+                    style="@style/Widget.TareasHogar.Boton.Info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/blue"
-                    android:text="@string/btn_detalle"
-                    android:textColor="@color/white"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
+                    android:minHeight="48dp"
+                    android:text="@string/btn_detalle" />
             </LinearLayout>
 
+            <!-- FILA 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_tarjeta"
                 android:gravity="center_vertical"
-                >
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <ImageView
+                    android:id="@+id/imgAspirar"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
-                    android:src="@drawable/aspiradora"
                     android:contentDescription="@string/descripcion_aspirar_casa"
-                    />
+                    android:src="@drawable/aspiradora" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="@string/txt_aspirar_casa"
-                        android:gravity="center_horizontal"
-                        />
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/txtNombreAspirar"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:text="@string/txt_aspirar_casa"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoAspirar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="@string/txt_estado_tarea_pendiente"
-                        android:gravity="center_horizontal"
-                        />
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btnDetalleAspirar"
+                    style="@style/Widget.TareasHogar.Boton.Info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/blue"
-                    android:text="@string/btn_detalle"
-                    android:textColor="@color/white"
-                    />
+                    android:minHeight="48dp"
+                    android:text="@string/btn_detalle" />
             </LinearLayout>
 
+            <!-- FILA 3 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_tarjeta"
                 android:gravity="center_vertical"
-                >
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <ImageView
+                    android:id="@+id/imgLoza"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
                     android:contentDescription="@string/descripcion_lavar_loza"
-                    android:src="@drawable/esponja_plato"
-                    tools:ignore="ImageContrastCheck" />
+                    android:src="@drawable/esponja_plato" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="@string/txt_lavar_loza"
-                        android:gravity="center_horizontal"
-                        />
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/txtNombreLoza"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:text="@string/txt_lavar_loza"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoLoza"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="@string/txt_estado_tarea_pendiente"
-                        android:gravity="center_horizontal"
-                        />
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btnDetalleLoza"
+                    style="@style/Widget.TareasHogar.Boton.Info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/blue"
-                    android:text="@string/btn_detalle"
-                    android:textColor="@color/white"
-                    />
+                    android:minHeight="48dp"
+                    android:text="@string/btn_detalle" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:fillViewport="true"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        tools:ignore="UseCompoundDrawables">
+        android:padding="30dp">
+
+        <!-- LOGO Y NOMBRE -->
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/raton_barriendo"
+            android:layout_marginTop="24dp"
             android:contentDescription="@string/descripcion_logo"
-            />
+            android:src="@mipmap/raton_barriendo" />
 
         <TextView
             android:id="@+id/txtApp"
+            style="@style/Widget.TareasHogar.Titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold|italic"
-            android:textSize="30sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
             android:text="@string/nombre_app"
-            />
-    </LinearLayout>
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="30dp"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        <!-- CORREO -->
         <EditText
-            android:id="@+id/editCorreo"
+            android:id="@+id/edtCorreo"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:hint="@string/hint_correo"
-            android:inputType="textEmailAddress"
             android:autofillHints="emailAddress"
-            tools:ignore="VisualLintTextFieldSize" />
+            android:hint="@string/hint_correo"
+            android:inputType="textEmailAddress" />
 
+        <!-- CONTRASEÑA (oculta al escribir) -->
         <EditText
-            android:id="@+id/editContraseña"
+            android:id="@+id/edtContrasena"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:hint="@string/hint_contraseña"
-            android:inputType="textPassword"
             android:autofillHints="password"
-            tools:ignore="VisualLintTextFieldSize" />
+            android:hint="@string/hint_contrasena"
+            android:inputType="textPassword" />
 
         <CheckBox
             android:id="@+id/chkRecuerdame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/chk_recordar_inicio"
-            />
+            android:minHeight="48dp"
+            android:text="@string/chk_recordar_inicio" />
 
+        <!-- INGRESAR -->
         <Button
-            android:id="@+id/bntLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:id="@+id/btnIngresar"
+            style="@style/Widget.TareasHogar.Boton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
             android:layout_marginTop="10dp"
-            android:text="@string/btn_login"
-            android:backgroundTint="@color/green"
-            />
+            android:text="@string/btn_login" />
 
+        <!-- IR A REGISTRO -->
         <TextView
             android:id="@+id/txtPreguntaRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            android:gravity="center"
             android:text="@string/pregunta_registro"
-            />
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold" />
+
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

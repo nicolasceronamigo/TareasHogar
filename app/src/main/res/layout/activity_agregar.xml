@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/pantallaAgregar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".AgregarActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:paddingTop="24dp"
@@ -18,34 +19,28 @@
         <!-- TITULO -->
         <TextView
             android:id="@+id/txtTituloAgregar"
+            style="@style/Widget.TareasHogar.Titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/agregar_titulo"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:gravity="center" />
+            android:text="@string/agregar_titulo" />
 
         <!-- SUBTITULO -->
         <TextView
             android:id="@+id/txtSubtituloAgregar"
+            style="@style/Widget.TareasHogar.Subtitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="@string/agregar_subtitulo"
-            android:textColor="?attr/colorOnSurfaceVariant"
-            android:textSize="14sp"
-            android:gravity="center" />
+            android:text="@string/agregar_subtitulo" />
 
         <!-- ZONA -->
         <TextView
+            android:id="@+id/txtZona"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/agregar_zona"
-            android:textColor="?attr/colorOnSurface"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:text="@string/agregar_zona" />
 
         <Spinner
             android:id="@+id/spnZona"
@@ -57,24 +52,21 @@
 
         <EditText
             android:id="@+id/edtNuevaZona"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:hint="@string/agregar_nueva_zona_hint"
-            android:inputType="textCapWords"
-            android:autofillHints="postalAddress"
-            android:textColor="?attr/colorOnSurface"
-            android:textColorHint="?attr/colorOnSurfaceVariant"
-            android:textSize="14sp" />
+            android:importantForAutofill="no"
+            android:inputType="textCapWords" />
 
         <!-- CATEGORIA -->
         <TextView
+            android:id="@+id/txtCategoria"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/agregar_categoria"
-            android:textColor="?attr/colorOnSurface"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:text="@string/agregar_categoria" />
 
         <Spinner
             android:id="@+id/spnCategoria"
@@ -86,13 +78,12 @@
 
         <!-- TAREA -->
         <TextView
+            android:id="@+id/txtTareaEspecifica"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/agregar_tarea"
-            android:textColor="?attr/colorOnSurface"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:text="@string/agregar_tarea_especifica" />
 
         <Spinner
             android:id="@+id/spnTarea"
@@ -104,23 +95,21 @@
 
         <EditText
             android:id="@+id/edtTareaPersonalizada"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:hint="@string/agregar_tarea_personalizada_hint"
-            android:inputType="textCapSentences"
-            android:textColor="?attr/colorOnSurface"
-            android:textColorHint="?attr/colorOnSurfaceVariant"
-            android:textSize="14sp" />
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences" />
 
         <!-- FRECUENCIA -->
         <TextView
+            android:id="@+id/txtFrecuencia"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/agregar_frecuencia"
-            android:textColor="?attr/colorOnSurface"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:text="@string/agregar_frecuencia" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -130,20 +119,20 @@
 
             <EditText
                 android:id="@+id/edtFrecuenciaCantidad"
+                style="@style/Widget.TareasHogar.Campo"
                 android:layout_width="80dp"
                 android:layout_height="52dp"
-                android:hint="3"
-                android:inputType="number"
                 android:gravity="center"
-                android:textColor="?attr/colorOnSurface"
-                android:textColorHint="?attr/colorOnSurfaceVariant" />
+                android:hint="@string/agregar_frecuencia_hint"
+                android:importantForAutofill="no"
+                android:inputType="number" />
 
             <Spinner
                 android:id="@+id/spnUnidadFrecuencia"
                 android:layout_width="0dp"
                 android:layout_height="52dp"
-                android:layout_weight="1"
                 android:layout_marginStart="12dp"
+                android:layout_weight="1"
                 android:entries="@array/unidades_frecuencia"
                 android:spinnerMode="dropdown" />
 
@@ -151,13 +140,12 @@
 
         <!-- RESPONSABLE -->
         <TextView
+            android:id="@+id/txtResponsable"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/agregar_responsable"
-            android:textColor="?attr/colorOnSurface"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:text="@string/agregar_responsable" />
 
         <Spinner
             android:id="@+id/spnResponsable"
@@ -168,25 +156,23 @@
             android:spinnerMode="dropdown" />
 
         <!-- RECORDATORIO -->
-        <Switch
+        <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/swRecordatorio"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:minHeight="52dp"
             android:text="@string/agregar_recordatorio"
-            android:textColor="?attr/colorOnSurface"
-            android:thumbTint="@color/green"
-            android:trackTint="?attr/colorOnSurfaceVariant" />
+            android:textColor="?attr/colorOnSurface" />
 
         <!-- PRIORIDAD -->
         <TextView
+            android:id="@+id/txtPrioridad"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/agregar_prioridad"
-            android:textColor="?attr/colorOnSurface"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:text="@string/agregar_prioridad" />
 
         <RadioGroup
             android:id="@+id/rgPrioridad"
@@ -197,39 +183,34 @@
             <RadioButton
                 android:id="@+id/rbPrioridadBaja"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:text="@string/prioridad_baja"
-                android:textColor="?attr/colorOnSurface"
-                android:buttonTint="@color/green" />
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/prioridad_baja" />
 
             <RadioButton
                 android:id="@+id/rbPrioridadMedia"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:text="@string/prioridad_media"
-                android:textColor="?attr/colorOnSurface"
-                android:buttonTint="@color/green" />
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/prioridad_media" />
 
             <RadioButton
                 android:id="@+id/rbPrioridadAlta"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:text="@string/prioridad_alta"
-                android:textColor="?attr/colorOnSurface"
-                android:buttonTint="@color/green" />
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/prioridad_alta" />
 
         </RadioGroup>
 
         <!-- GUARDAR -->
         <Button
             android:id="@+id/btnGuardarTarea"
+            style="@style/Widget.TareasHogar.Boton"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/green"
-            android:text="@string/agregar_boton"
-            android:textStyle="bold"
-            android:textAllCaps="false" />
+            android:text="@string/agregar_boton" />
 
         <!-- CANCELAR -->
         <TextView
@@ -237,9 +218,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:minHeight="48dp"
             android:gravity="center"
             android:text="@string/agregar_cancelar"
-            android:textColor="?attr/colorOnSurface"
+            android:textColor="?attr/colorPrimary"
             android:textSize="14sp" />
 
     </LinearLayout>

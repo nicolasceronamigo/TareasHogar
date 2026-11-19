@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/pantallaIA"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".IAActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,88 +19,77 @@
         <!-- TITULO -->
         <TextView
             android:id="@+id/txtTituloIA"
+            style="@style/Widget.TareasHogar.Titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ia_titulo"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:gravity="center" />
+            android:text="@string/ia_titulo" />
 
         <!-- SUBTITULO -->
         <TextView
             android:id="@+id/txtSubtituloIA"
+            style="@style/Widget.TareasHogar.Subtitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="@string/ia_subtitulo"
-            android:textColor="?attr/colorOnSurfaceVariant"
-            android:textSize="14sp"
-            android:gravity="center" />
+            android:text="@string/ia_subtitulo" />
 
         <!-- PREGUNTA -->
         <TextView
+            android:id="@+id/txtPreguntaLabelIA"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/ia_pregunta_label"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:text="@string/ia_pregunta_label" />
 
         <!-- CAMPO DE CONSULTA -->
         <EditText
             android:id="@+id/edtPreguntaIA"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="10dp"
             android:gravity="top|start"
             android:padding="12dp"
             android:hint="@string/ia_pregunta_hint"
+            android:importantForAutofill="no"
             android:inputType="textCapSentences|textMultiLine"
-            android:minLines="3"
             android:maxLines="5"
-            android:backgroundTint="@color/green"
-            android:textColor="?attr/colorOnSurface"
-            android:textColorHint="?attr/colorOnSurfaceVariant"
-            android:textSize="14sp" />
+            android:minLines="3" />
 
         <!-- BOTON PREGUNTAR -->
         <Button
             android:id="@+id/btnPreguntarIA"
+            style="@style/Widget.TareasHogar.Boton"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/green"
-            android:text="@string/ia_boton"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:textAllCaps="false" />
+            android:text="@string/ia_boton" />
 
         <!-- TITULO RESPUESTA -->
         <TextView
+            android:id="@+id/txtRespuestaTituloIA"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/ia_respuesta_titulo"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="18sp" />
 
         <!-- AREA DE RESPUESTA -->
         <TextView
             android:id="@+id/txtRespuestaIA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="150dp"
             android:layout_marginTop="12dp"
+            android:minHeight="150dp"
             android:padding="16dp"
+            android:background="@drawable/bg_tarjeta"
             android:gravity="top|start"
-            android:background="?attr/colorSurfaceVariant"
+            android:lineSpacingExtra="4dp"
             android:text="@string/ia_respuesta_ejemplo"
             android:textColor="?attr/colorOnSurface"
-            android:textSize="14sp"
-            android:lineSpacingExtra="4dp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 

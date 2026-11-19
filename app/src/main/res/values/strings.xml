@@ -2,11 +2,11 @@
 <resources>
 
     <!-- APLICACIÓN Y LOGIN -->
-    <string name="app_name">TareasHogar</string>
-    <string name="descripcion_logo">ImagenLogo</string>
-    <string name="nombre_app">Tareas Hogar</string>
+    <string name="app_name">Tareas del Hogar</string>
+    <string name="descripcion_logo">Logo de Tareas del Hogar</string>
+    <string name="nombre_app">Tareas del Hogar</string>
     <string name="hint_correo">Correo</string>
-    <string name="hint_contraseña">Contraseña</string>
+    <string name="hint_contrasena">Contraseña</string>
     <string name="btn_login">Iniciar Sesión</string>
     <string name="chk_recordar_inicio">Recuérdame</string>
     <string name="pregunta_registro">¿No te has registrado? Regístrate aquí</string>
@@ -44,6 +44,7 @@
     <string name="prioridad_alta">Alta</string>
     <string name="agregar_boton">Guardar tarea</string>
     <string name="agregar_cancelar">Cancelar</string>
+    <string name="agregar_frecuencia_hint">3</string>
 
     <!-- ZONAS DEL HOGAR -->
     <string-array name="zonas_hogar">
@@ -130,10 +131,21 @@
     <string name="txt_fecha_ultima_realizada">Sin registros</string>
     <string name="sw_realizada">Marcar como realizada</string>
 
+    <string name="detalle_zona">Zona</string>
+    <string name="detalle_zona_valor">Patio</string>
+    <string name="detalle_categoria">Categoría</string>
+    <string name="detalle_categoria_valor">Limpieza</string>
+    <string name="detalle_frecuencia">Frecuencia</string>
+    <string name="detalle_frecuencia_valor">Cada 3 días</string>
+    <string name="detalle_responsable">Responsable</string>
+    <string name="detalle_responsable_valor">Yo</string>
+    <string name="detalle_prioridad">Prioridad</string>
+    <string name="detalle_prioridad_valor">Media</string>
+
     <!-- BOTONES -->
     <string name="btn_editar">Editar</string>
     <string name="btn_eliminar">Eliminar</string>
     <string name="btn_detalle">Ver detalle</string>
-
+    <string name="descripcion_icono_agregar">Agregar tarea nueva</string>
 
 </resources>

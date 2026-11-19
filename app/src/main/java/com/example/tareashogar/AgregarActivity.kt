@@ -5,13 +5,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.Spinner
-import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.materialswitch.MaterialSwitch
 
 class AgregarActivity : AppCompatActivity() {
 
@@ -54,7 +54,7 @@ class AgregarActivity : AppCompatActivity() {
         val spnUnidadFrecuencia = findViewById<Spinner>(R.id.spnUnidadFrecuencia)
 
         val spnResponsable = findViewById<Spinner>(R.id.spnResponsable)
-        val swRecordatorio = findViewById<Switch>(R.id.swRecordatorio)
+        val swRecordatorio = findViewById<MaterialSwitch>(R.id.swRecordatorio)
 
         val rgPrioridad = findViewById<RadioGroup>(R.id.rgPrioridad)
 
@@ -174,4 +174,4 @@ class AgregarActivity : AppCompatActivity() {
             finish()
         }
     }
-}
+}

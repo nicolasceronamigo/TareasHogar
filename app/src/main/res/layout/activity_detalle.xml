@@ -4,119 +4,257 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalleActivity"
-    >
+    android:fillViewport="true"
+    tools:context=".DetalleActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="24dp"
-        >
+        android:orientation="vertical"
+        android:padding="24dp">
 
         <ImageView
             android:id="@+id/imgBarrer"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/escoba"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:contentDescription="@string/descripcion_barrer"
-            />
+            android:src="@drawable/escoba" />
 
         <TextView
             android:id="@+id/txtTareaBarrer"
-            android:layout_width="wrap_content"
+            style="@style/Widget.TareasHogar.Titulo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/txt_barrer_patio"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            />
+            android:text="@string/txt_barrer_patio" />
+
+        <!-- DATOS DEL REGISTRO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical"
+            android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            >
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/txtVecesRealizada"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtLabelZona"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="@string/detalle_zona"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtValorZona"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/detalle_zona_valor"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtLabelCategoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detalle_categoria"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtValorCategoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/detalle_categoria_valor"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtLabelFrecuencia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detalle_frecuencia"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtValorFrecuencia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/detalle_frecuencia_valor"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtLabelResponsable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detalle_responsable"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtValorResponsable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/detalle_responsable_valor"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtLabelPrioridad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detalle_prioridad"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtValorPrioridad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/detalle_prioridad_valor"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtLabelVecesRealizada"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/txt_veces_realizada"
-                />
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="16sp" />
+
             <TextView
-                android:id="@+id/txtNumeroRealizada"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtValorVecesRealizada"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="end"
                 android:text="@string/txt_num_realizada"
-                android:textStyle="bold"
-                />
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            >
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/txtUltimaRealizada"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtLabelUltimaRealizada"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:gravity="center_horizontal"
+                android:layout_weight="1"
                 android:text="@string/txt_ultima_realizada"
-                />
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="16sp" />
+
             <TextView
-                android:id="@+id/txtFechaUltimaRealizada"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtValorUltimaRealizada"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="end"
                 android:text="@string/txt_fecha_ultima_realizada"
-                android:textStyle="bold"
-                />
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
+        </LinearLayout>
 
-        <Switch
+        <!-- MARCAR COMO REALIZADA -->
+        <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/swRealizada"
-            android:layout_width="wrap_content"
-            android:minWidth="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:checked="false"
             android:minHeight="48dp"
             android:text="@string/sw_realizada"
-            tools:ignore="UseSwitchCompatOrMaterialXml"
-            />
+            android:textColor="?attr/colorOnSurface" />
 
+        <!-- ACCIONES -->
         <Button
             android:id="@+id/btnEditar"
-            android:layout_width="wrap_content"
-            android:minWidth="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/btn_editar"
-            android:backgroundTint="@color/yellow"
-            android:textColor="@color/black"
-            />
+            style="@style/Widget.TareasHogar.Boton.Advertencia"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_editar" />
 
         <Button
             android:id="@+id/btnEliminar"
-            android:layout_width="wrap_content"
-            android:minWidth="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/btn_eliminar"
-            android:backgroundTint="@color/red"
-            android:textColor="@color/black"
-            />
+            style="@style/Widget.TareasHogar.Boton.Peligro"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/btn_eliminar" />
     </LinearLayout>
 </ScrollView>

@@ -1,120 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/pantallaRegistro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".RegistroActivity">
 
     <LinearLayout
-        android:layout_width="320dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
         android:paddingTop="24dp"
         android:paddingBottom="24dp">
 
         <!-- TITULO -->
         <TextView
             android:id="@+id/txtTituloRegistro"
+            style="@style/Widget.TareasHogar.Titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/registro_titulo"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            android:text="@string/registro_titulo" />
 
         <!-- SUBTITULO -->
         <TextView
             android:id="@+id/txtSubtituloRegistro"
+            style="@style/Widget.TareasHogar.Subtitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:gravity="center"
-            android:text="@string/registro_subtitulo"
-            android:textColor="?attr/colorOnSurfaceVariant"
-            android:textSize="14sp" />
+            android:text="@string/registro_subtitulo" />
 
         <!-- SECCION DATOS -->
         <TextView
+            android:id="@+id/txtSeccionDatos"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-            android:text="@string/registro_seccion_datos"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:text="@string/registro_seccion_datos" />
 
         <!-- NOMBRE -->
         <EditText
             android:id="@+id/edtNombre"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="52dp"
             android:layout_marginTop="6dp"
-            android:hint="@string/registro_nombre_hint"
-            android:inputType="textPersonName"
             android:autofillHints="name"
-            android:textColor="?attr/colorOnSurface"
-            android:textColorHint="?attr/colorOnSurfaceVariant"
-            android:textSize="15sp" />
+            android:hint="@string/registro_nombre_hint"
+            android:inputType="textPersonName" />
 
         <!-- CORREO -->
         <EditText
             android:id="@+id/edtCorreo"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="52dp"
             android:layout_marginTop="4dp"
-            android:hint="@string/registro_correo_hint"
-            android:inputType="textEmailAddress"
             android:autofillHints="emailAddress"
-            android:textColor="?attr/colorOnSurface"
-            android:textColorHint="?attr/colorOnSurfaceVariant"
-            android:textSize="15sp" />
+            android:hint="@string/registro_correo_hint"
+            android:inputType="textEmailAddress" />
 
         <!-- CONTRASEÑA -->
         <EditText
             android:id="@+id/edtContrasena"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="52dp"
             android:layout_marginTop="4dp"
-            android:hint="@string/registro_contrasena_hint"
-            android:inputType="textPassword"
             android:autofillHints="newPassword"
-            android:textColor="?attr/colorOnSurface"
-            android:textColorHint="?attr/colorOnSurfaceVariant"
-            android:textSize="15sp" />
+            android:hint="@string/registro_contrasena_hint"
+            android:inputType="textPassword" />
 
-        <!-- CONFIRMAR CONTRASEÑA -->
+        <!-- REPETIR CONTRASEÑA -->
         <EditText
             android:id="@+id/edtConfirmarContrasena"
+            style="@style/Widget.TareasHogar.Campo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="52dp"
             android:layout_marginTop="4dp"
-            android:hint="@string/registro_confirmar_contrasena_hint"
-            android:inputType="textPassword"
             android:autofillHints="newPassword"
-            android:textColor="?attr/colorOnSurface"
-            android:textColorHint="?attr/colorOnSurfaceVariant"
-            android:textSize="15sp" />
+            android:hint="@string/registro_confirmar_contrasena_hint"
+            android:inputType="textPassword" />
 
         <!-- PREGUNTA RADIOGROUP -->
         <TextView
+            android:id="@+id/txtPreguntaOrganizacion"
+            style="@style/Widget.TareasHogar.Etiqueta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/registro_pregunta"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:text="@string/registro_pregunta" />
 
-        <!-- OPCIONES DE ORGANIZACION -->
         <RadioGroup
             android:id="@+id/rgOrganizacion"
             android:layout_width="match_parent"
@@ -127,30 +107,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:gravity="center_vertical"
-                android:buttonTint="@color/green"
-                android:text="@string/registro_individual"
-                android:textColor="?attr/colorOnSurface" />
+                android:text="@string/registro_individual" />
 
             <RadioButton
                 android:id="@+id/rbPareja"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:gravity="center_vertical"
-                android:buttonTint="@color/green"
-                android:text="@string/registro_pareja"
-                android:textColor="?attr/colorOnSurface" />
+                android:text="@string/registro_pareja" />
 
             <RadioButton
                 android:id="@+id/rbFamilia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:gravity="center_vertical"
-                android:buttonTint="@color/green"
-                android:text="@string/registro_familia"
-                android:textColor="?attr/colorOnSurface" />
+                android:text="@string/registro_familia" />
 
         </RadioGroup>
 
@@ -159,24 +130,19 @@
             android:id="@+id/chkTerminos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:gravity="center_vertical"
             android:layout_marginTop="8dp"
-            android:buttonTint="@color/green"
+            android:minHeight="48dp"
             android:text="@string/registro_terminos"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="13sp" />
+            android:textSize="14sp" />
 
         <!-- BOTON REGISTRAR -->
         <Button
             android:id="@+id/btnRegistrar"
+            style="@style/Widget.TareasHogar.Boton"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/green"
-            android:text="@string/registro_boton"
-            android:textStyle="bold"
-            android:textAllCaps="false" />
+            android:text="@string/registro_boton" />
 
         <!-- VOLVER AL LOGIN -->
         <TextView
@@ -184,9 +150,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:minHeight="48dp"
             android:gravity="center"
             android:text="@string/registro_login"
-            android:textColor="?attr/colorOnSurface"
+            android:textColor="?attr/colorPrimary"
             android:textSize="14sp" />
 
     </LinearLayout>

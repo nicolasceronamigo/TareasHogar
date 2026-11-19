@@ -1,9 +1,62 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<resources>
+    <!-- Tema base de la aplicación (modo claro). -->
     <style name="Base.Theme.TareasHogar" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primario</item>
+        <item name="colorOnPrimary">@color/sobre_primario</item>
     </style>
 
     <style name="Theme.TareasHogar" parent="Base.Theme.TareasHogar" />
+
+    <!-- ESTILOS PROPIOS: se usan en las seis pantallas -->
+
+    <!-- Botón principal -->
+    <style name="Widget.TareasHogar.Boton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primario</item>
+        <item name="android:textColor">@color/sobre_primario</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.TareasHogar.Boton.Info">
+        <item name="backgroundTint">@color/accion_info</item>
+        <item name="android:textColor">@color/sobre_accion_info</item>
+    </style>
+
+    <style name="Widget.TareasHogar.Boton.Advertencia">
+        <item name="backgroundTint">@color/accion_advertencia</item>
+        <item name="android:textColor">@color/sobre_accion_advertencia</item>
+    </style>
+
+    <style name="Widget.TareasHogar.Boton.Peligro">
+        <item name="backgroundTint">@color/accion_peligro</item>
+        <item name="android:textColor">@color/sobre_accion_peligro</item>
+    </style>
+
+    <!-- Textos -->
+    <style name="Widget.TareasHogar.Titulo" parent="">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.TareasHogar.Subtitulo" parent="">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.TareasHogar.Etiqueta" parent="">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Campos de texto -->
+    <style name="Widget.TareasHogar.Campo" parent="">
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textColorHint">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textSize">15sp</item>
+    </style>
 </resources>
