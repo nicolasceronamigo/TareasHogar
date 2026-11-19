@@ -1,9 +1,11 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TareasHogar</string>
-    <string name="nombre_app">Tareas Hogar</string>
-    <string name="descripcion_logo">ImagenLogo</string>
 
+    <!-- APLICACIÓN Y LOGIN -->
+    <string name="app_name">TareasHogar</string>
+    <string name="descripcion_logo">ImagenLogo</string>
+    <string name="nombre_app">Tareas Hogar</string>
     <string name="hint_correo">Correo</string>
     <string name="hint_contraseña">Contraseña</string>
     <string name="btn_login">Iniciar Sesión</string>
@@ -32,7 +34,7 @@
     <string name="agregar_zona">Zona o espacio</string>
     <string name="agregar_nueva_zona_hint">O escribe una nueva zona</string>
     <string name="agregar_categoria">Categoría</string>
-    <string name="agregar_tarea">Tarea específica</string>
+    <string name="agregar_tarea_especifica">Tarea específica</string>
     <string name="agregar_tarea_personalizada_hint">O escribe una tarea personalizada</string>
     <string name="agregar_frecuencia">Frecuencia de repetición</string>
     <string name="agregar_responsable">Responsable</string>
@@ -55,7 +57,7 @@
         <item>Otro espacio</item>
     </string-array>
 
-    <!-- CATEGORIAS -->
+    <!-- CATEGORÍAS -->
     <string-array name="categorias_tarea">
         <item>Selecciona una categoría</item>
         <item>Limpieza</item>
@@ -102,9 +104,10 @@
 
     <string name="ia_respuesta_ejemplo">Puedes organizar la limpieza de tu cocina dividiendo las actividades en tres tareas:\n\n• Lavar los platos.\n• Limpiar las superficies.\n• Barrer y trapear el suelo.\n\nAsigna un responsable y una frecuencia para cada actividad.</string>
 
-
+    <!-- LISTA DE TAREAS -->
     <string name="titulo_lista">Tareas Disponibles</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="agregar_tarea">Agregar Tarea</string>
 
     <string name="descripcion_barrer">Barrer Patio</string>
     <string name="txt_barrer_patio">Barrer Patio</string>
@@ -120,6 +123,5 @@
 
     <string name="btn_quitar">Quitar</string>
     <string name="btn_realizada">Realizada</string>
-
 
 </resources>
