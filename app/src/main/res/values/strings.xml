@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
@@ -123,5 +122,18 @@
 
     <string name="btn_quitar">Quitar</string>
     <string name="btn_realizada">Realizada</string>
+
+    <!-- DETALLE DE TAREA -->
+    <string name="txt_veces_realizada">Veces realizada</string>
+    <string name="txt_num_realizada">0</string>
+    <string name="txt_ultima_realizada">Última vez realizada</string>
+    <string name="txt_fecha_ultima_realizada">Sin registros</string>
+    <string name="sw_realizada">Marcar como realizada</string>
+
+    <!-- BOTONES -->
+    <string name="btn_editar">Editar</string>
+    <string name="btn_eliminar">Eliminar</string>
+    <string name="btn_detalle">Ver detalle</string>
+
 
 </resources>
