@@ -154,7 +154,8 @@
             android:gravity="center"
             android:text="@string/registro_login"
             android:textColor="?attr/colorPrimary"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:onClick="btnIrLoginOnClick"/>
 
     </LinearLayout>
 

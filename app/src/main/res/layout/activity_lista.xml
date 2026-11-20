@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".ListaActivity">
 
     <!-- BARRA SUPERIOR: título y botones -->
@@ -33,7 +34,8 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/descripcion_icono_agregar"
             android:src="@drawable/ic_agregar"
-            app:tint="?attr/colorOnSurface" />
+            app:tint="?attr/colorOnSurface"
+            android:onClick="btnAgregarOnClick" />
 
         <ImageButton
             android:id="@+id/btnCerrarSesion"
@@ -44,7 +46,8 @@
             android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/x"
-            app:tint="?attr/colorOnSurface" />
+            app:tint="?attr/colorOnSurface"
+            android:onClick="btnLogoutOnClick"/>
     </LinearLayout>
 
     <!-- LISTA DE TAREAS (con scroll) -->
@@ -112,6 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
+                    android:onClick="btnDetalleOnClick"
                     android:text="@string/btn_detalle" />
             </LinearLayout>
 
@@ -223,4 +227,13 @@
 
         </LinearLayout>
     </ScrollView>
+    <Button
+        android:id="@+id/btnIA"
+        style="@style/Widget.TareasHogar.Boton.Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_margin="10dp"
+        android:text="@string/btn_IA"
+        android:onClick="btnIAOnClick"/>
 </LinearLayout>

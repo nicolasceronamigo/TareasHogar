@@ -156,6 +156,9 @@
             android:spinnerMode="dropdown" />
 
         <!-- RECORDATORIO -->
+
+        <!-- PRIORIDAD -->
+
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/swRecordatorio"
             android:layout_width="match_parent"
@@ -165,7 +168,6 @@
             android:text="@string/agregar_recordatorio"
             android:textColor="?attr/colorOnSurface" />
 
-        <!-- PRIORIDAD -->
         <TextView
             android:id="@+id/txtPrioridad"
             style="@style/Widget.TareasHogar.Etiqueta"
@@ -222,7 +224,8 @@
             android:gravity="center"
             android:text="@string/agregar_cancelar"
             android:textColor="?attr/colorPrimary"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:onClick="btnCancelarAgregarOnClick"/>
 
     </LinearLayout>
 

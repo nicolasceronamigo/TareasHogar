@@ -147,5 +147,7 @@
     <string name="btn_eliminar">Eliminar</string>
     <string name="btn_detalle">Ver detalle</string>
     <string name="descripcion_icono_agregar">Agregar tarea nueva</string>
+    <string name="btn_detalle_a_lista">Volver a la lista</string>
+    <string name="btn_IA">Asistente IA</string>
 
 </resources>
